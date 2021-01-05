@@ -120,7 +120,7 @@ export const Home = () => {
             Research
           </Heading>
           <Text mb={5}>Coming soon – sign up</Text>
-          <Box bg="gray.300" borderRadius={5}>
+          <Box bg="gray.50" borderRadius={5}>
             <Iframe
               url="https://mechanaut.substack.com/embed"
               width="480"
