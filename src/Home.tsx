@@ -13,6 +13,7 @@ import {
 import { ColorModeSwitcher } from './ColorModeSwitcher'
 import { GiAtom } from 'react-icons/gi'
 import { FaTelegram } from 'react-icons/fa'
+import Iframe from 'react-iframe'
 
 export const Home = () => {
   const bgColor = useColorModeValue('gray.50', 'gray.900')
@@ -30,7 +31,14 @@ export const Home = () => {
       </Flex>
       <Flex height="67vh" alignItems="center" justifyContent="center">
         <Box p={3} textAlign="center" justifySelf="center">
-          <Heading as="h1" size="4xl" mb={5}>
+          <Heading
+            as="h1"
+            size="4xl"
+            mb={5}
+            bgGradient="linear(to-r, brand.300, brand.700)"
+            bgClip="text"
+            letterSpacing={-2}
+          >
             The Future is Autonomous
           </Heading>
           <Text
@@ -46,7 +54,7 @@ export const Home = () => {
             investments.
           </Text>
           <br />
-          <Link _target="blank" href="https://t.me/mechanaut_xyz">
+          <Link _target="blank" href="https://t.me/oaksprout">
             <Button size="lg" leftIcon={<FaTelegram />}>
               Get Involved
             </Button>
@@ -111,7 +119,17 @@ export const Home = () => {
           <Heading textAlign="center" size="2xl" mb={5}>
             Research
           </Heading>
-          <Text>Coming soon</Text>
+          <Text mb={5}>Coming soon – sign up</Text>
+          <Box bg="gray.300" borderRadius={5}>
+            <Iframe
+              url="https://mechanaut.substack.com/embed"
+              width="480"
+              height="320"
+              frameBorder={0}
+              scrolling="no"
+              title="Substack signup form"
+            />
+          </Box>
         </Box>
       </Flex>
       <Box textAlign="center" p={5} bg={bgColor}>
