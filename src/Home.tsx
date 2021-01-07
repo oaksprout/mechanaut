@@ -119,8 +119,16 @@ export const Home = () => {
           <Heading textAlign="center" size="2xl" mb={5}>
             Research
           </Heading>
-          <Text mb={5}>Coming soon – sign up</Text>
-          <Box bg="gray.50" borderRadius={5}>
+          <Text mb={5}>
+            Coming soon – 
+            <Link
+              href="https://mechanaut.substack.com"
+              textDecoration="underline"
+            >
+              sign up
+            </Link>
+          </Text>
+          {/* <Box bg="gray.50" borderRadius={5}>
             <Iframe
               url="https://mechanaut.substack.com/embed"
               width="480"
@@ -129,7 +137,7 @@ export const Home = () => {
               scrolling="no"
               title="Substack signup form"
             />
-          </Box>
+          </Box> */}
         </Box>
       </Flex>
       <Box textAlign="center" p={5} bg={bgColor}>
