@@ -5,15 +5,12 @@ import {
   Box,
   Text,
   Link,
-  Button,
   useColorModeValue,
   Heading,
   Flex,
 } from '@chakra-ui/react'
 import { ColorModeSwitcher } from './ColorModeSwitcher'
 import { GiAtom } from 'react-icons/gi'
-import { FaTelegram } from 'react-icons/fa'
-import Iframe from 'react-iframe'
 
 export const Home = () => {
   const bgColor = useColorModeValue('gray.50', 'gray.900')
@@ -50,24 +47,17 @@ export const Home = () => {
           >
             We are a digital cooperative focused on the intersection of
             multi-agent systems, open data and ultra long-tail finance.
-            Expanding the ecosystem through research+design, tools and
-            investments.
+            Expanding the ecosystem through investments, research+design and tools.
           </Text>
-          <br />
-          <Link _target="blank" href="https://t.me/oaksprout">
-            <Button size="lg" leftIcon={<FaTelegram />}>
-              Get Involved
-            </Button>
-          </Link>
         </Box>
       </Flex>
       <Flex
-        height="67vh"
+        py={10}
         alignItems="center"
         justifyContent="center"
         bg={bgColor}
       >
-        <Box textAlign="center" mb={5}>
+        <Box textAlign="center" py={10}>
           <Heading textAlign="center" size="2xl" mb={5}>
             Tools
           </Heading>
@@ -112,36 +102,43 @@ export const Home = () => {
           >
             Go to tool
           </Link>
-        </Box>
-      </Flex>
-      <Flex height="67vh" alignItems="center" justifyContent="center">
-        <Box textAlign="center" mb={10}>
-          <Heading textAlign="center" size="2xl" mb={5}>
-            Research
+          <br />
+          <Divider my={5} w={50} display="inline-block" />
+          <Image />
+          <Heading size="lg" mb={3}>
+            👁 Tiles
           </Heading>
-          <Text mb={5}>
-            Coming soon – 
-            <Link
-              href="https://mechanaut.substack.com"
-              textDecoration="underline"
-            >
-              sign up
-            </Link>
+          <Text
+            maxWidth="42ch"
+            display="inline-block"
+            justifySelf="center"
+            size="lg"
+            mb={3}
+          >
+            Browse documents on the Ceramic network
           </Text>
-          {/* <Box bg="gray.50" borderRadius={5}>
-            <Iframe
-              url="https://mechanaut.substack.com/embed"
-              width="480"
-              height="320"
-              frameBorder={0}
-              scrolling="no"
-              title="Substack signup form"
-            />
-          </Box> */}
+          <br />
+          <Link
+            href="https://tiles.mechanaut.xyz"
+            textDecoration="underline"
+          >
+            Go to tool
+          </Link>
         </Box>
       </Flex>
-      <Box textAlign="center" p={5} bg={bgColor}>
-        <Text>Copyright 2021</Text>
+      <Flex alignItems="center" justifyContent="center" py={10}>
+        <Box textAlign="center" py={10}>
+          <Link textDecoration="underline" href="https://mechanaut.substack.com">
+            <Heading textAlign="center" size="2xl" mb={5}>Blog</Heading>
+          </Link>
+          <br />
+          <Link textDecoration="underline" href="https://anchor.fm/machinations"><Heading textAlign="center" size="2xl" mb={5}>Podcast</Heading></Link>
+          <br />
+          <Link textDecoration="underline" href="https://twitter.com/mechanaut_xyz"><Heading textAlign="center" size="2xl">Twitter</Heading></Link>
+        </Box>
+      </Flex>
+      <Box textAlign="center" p={12} bg={bgColor}>
+        <Text mb={6}>Copyright 2021</Text>
         <Box display="inline-block">
           <Flex alignItems="center" fontWeight="bold">
             <Box mr={1}>
