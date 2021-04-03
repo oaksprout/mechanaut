@@ -85,8 +85,8 @@ export default function OverFeature() {
               mx={{ lg: "auto" }}
               color={useColorModeValue("gray.500", "gray.400")}
             >
-              Mechanaut builds to help fledgling ultra high-potential
-              cryptonetworks get off the ground.
+              Mechanaut helps early communities in ultra high-potential
+              cryptonetworks get off the ground with targeted builds.
             </chakra.p>
           </Box>
           <Box mt={10}>
