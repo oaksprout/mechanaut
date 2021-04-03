@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react'
 import { ColorModeSwitcher } from './ColorModeSwitcher'
 import { GiAtom } from 'react-icons/gi'
+import OverFeature from './components/OverFeature'
 
 export const Home = () => {
   const bgColor = useColorModeValue('gray.50', 'gray.900')
@@ -51,6 +52,7 @@ export const Home = () => {
           </Text>
         </Box>
       </Flex>
+      <OverFeature />
       <Flex
         py={10}
         alignItems="center"
